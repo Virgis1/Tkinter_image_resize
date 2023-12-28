@@ -42,7 +42,7 @@ def resize_images():
                     logo_position = (resized_image.width - logo.width, resized_image.height - logo.height)
                     resized_image.paste(logo, logo_position, logo)
 
-                resized_image_filename = f"resized_with_logo_{os.path.basename(original_path)}"
+                resized_image_filename = f"resized_{os.path.basename(original_path)}"
                 resized_image_path = os.path.join(output_directory, resized_image_filename)
                 resized_image.save(resized_image_path)
 
